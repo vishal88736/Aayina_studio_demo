@@ -355,7 +355,7 @@ body.menu-open { overflow: hidden; }
 .float-chip {
   position: absolute;
   right: -14px;
-  top: 16%;
+  bottom: 8%;
   display: flex;
   align-items: center;
   gap: 10px;
