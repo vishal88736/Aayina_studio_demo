@@ -2,6 +2,8 @@
 
 **Live website: https://strong-cucurucho-858239.netlify.app**
 
+Designed and developed by **Shivani Sharma**.
+
 Website for **Aaina Beauty Studio**, a women's salon offering hair, makeup, skin, nails, mehendi and bridal services.
 
 It is a static site built with plain HTML, CSS and JavaScript. There is no backend: bookings and enquiries are sent to the studio as a ready-made WhatsApp message, and the visitor's choices are remembered in their own browser (`localStorage`).
