@@ -1,5 +1,7 @@
 # Aaina Beauty Studio
 
+**Live website: https://strong-cucurucho-858239.netlify.app**
+
 Website for **Aaina Beauty Studio**, a women's salon offering hair, makeup, skin, nails, mehendi and bridal services.
 
 It is a static site built with plain HTML, CSS and JavaScript. There is no backend: bookings and enquiries are sent to the studio as a ready-made WhatsApp message, and the visitor's choices are remembered in their own browser (`localStorage`).
@@ -8,11 +10,11 @@ It is a static site built with plain HTML, CSS and JavaScript. There is no backe
 
 | Page | What it has |
 |---|---|
-| `index.html` | Home: hero, services, signature looks, before and after slider, team, reviews, gallery, FAQ, visit and enquiry form |
-| `services.html` | Full price menu, combos, and a picker that sends the chosen services on WhatsApp |
-| `bridal.html` | Bridal services, packages, mehendi and nails, family packages, date check, makeup trial, bridal gallery with filters, terms |
-| `booking.html` | Step-by-step appointment booking that ends in a WhatsApp message |
-| `app/index.html` | App-style mobile view with a demo profile and bookings |
+| [Home](https://strong-cucurucho-858239.netlify.app/) | Hero, services, signature looks, before and after slider, team, reviews, gallery, FAQ, visit and enquiry form |
+| [Services](https://strong-cucurucho-858239.netlify.app/services.html) | Full price menu, combos, and a picker that sends the chosen services on WhatsApp |
+| [Bridal](https://strong-cucurucho-858239.netlify.app/bridal.html) | Bridal services, packages, mehendi and nails, family packages, date check, makeup trial, bridal gallery with filters, terms |
+| [Booking](https://strong-cucurucho-858239.netlify.app/booking.html) | Step-by-step appointment booking that ends in a WhatsApp message |
+| [App](https://strong-cucurucho-858239.netlify.app/app/) | App-style mobile view with a demo profile and bookings |
 
 ## Features
 
@@ -31,32 +33,9 @@ style.css   services.css   bridal.css   booking.css
 script.js   services.js    booking.js   data.js     (data.js = services and prices)
 favicon.svg
 app/        app-style page (index.html, app.css, app.js)
-images/     final photos (.jpg); images/README.txt lists every file name the pages expect
+images/     final photos (.jpg)
 ```
-
-## Run it locally
-
-No install or build step is needed. Open `index.html` in a browser, or serve the folder:
-
-```
-python -m http.server 8000
-```
-
-then visit http://localhost:8000.
-
-## Publish
-
-Any static host works, as long as the whole folder is uploaded as it is:
-
-- **GitHub Pages:** Settings → Pages → Branch `main`, folder `/ (root)` → Save
-- **Netlify:** drag the folder onto https://app.netlify.com/drop
-
-## Editing content
-
-- Prices and services: `data.js`
-- Studio WhatsApp number used by the scripts: `studioContact` at the top of `script.js` (the HTML files also have the number in their `tel:` and `wa.me` links)
-- Photos: replace the file in `images/` with a new `.jpg` of the same name and a similar shape (see `images/README.txt`)
 
 ## Photos
 
-The photos are AI-generated demo images, cropped for each slot. The original full-size PNGs are kept out of this repository.
+The photos are AI-generated demo images, cropped for each slot.
