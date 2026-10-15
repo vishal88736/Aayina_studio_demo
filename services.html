@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services and prices | Aaina Beauty Studio</title>
+  <meta name="description" content="Price menu for hair, makeup, skin and waxing, nails and mehendi at Aaina Beauty Studio. Save favourites and add services to your booking.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+  <div class="topbar">
+    Festive offer: <b>20% off Hair Spa</b> this month.
+    <a href="tel:+918791272440">Call +91 87912 72440</a>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="index.html" class="logo" aria-label="Aaina Beauty Studio, home">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">
+          <span class="logo-name">AAINA</span>
+          <span class="logo-sub">Beauty Studio</span>
+        </span>
+      </a>
+
+      <nav class="menu" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="bridal.html">Bridal</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#visit">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="open-badge" data-open><i></i><b>Open now</b></span>
+        <a class="icon-btn" href="tel:+918791272440" aria-label="Call us"><svg class="icon"><use href="#phone"/></svg></a>
+        <a class="btn btn-wine btn-sm" href="booking.html">Book Appointment</a>
+        <button class="burger" aria-label="Open menu" aria-expanded="false"><svg class="icon"><use href="#menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mm-top">
+      <span class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text"><span class="logo-name">AAINA</span><span class="logo-sub">Beauty Studio</span></span>
+      </span>
+      <button class="burger" data-close-menu aria-label="Close menu" style="display:grid"><svg class="icon"><use href="#close"/></svg></button>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="bridal.html">Bridal</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#visit">Contact</a>
+    </nav>
+    <div class="mm-foot">
+      <span class="open-badge" data-open><i></i><b>Open now</b></span>
+      <a class="btn btn-wine" href="booking.html">Book Appointment</a>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="page-head">
+      <div class="wrap">
+        <p class="label">Services and prices</p>
+        <h1>Price menu</h1>
+        <p>Search, save your favourites and add services to your booking. Prices marked "from" depend on hair length or design.</p>
+        <ul class="head-notes">
+          <li><svg class="icon"><use href="#shield"/></svg> Fresh wax, single-use strips</li>
+          <li><svg class="icon"><use href="#check"/></svg> Free patch test on request</li>
+          <li><svg class="icon"><use href="#clock"/></svg> Walk-ins welcome, appointments preferred</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="menu-area">
+    <div class="toolbar">
+      <div class="wrap">
+        <div class="toolbar-row">
+          <div class="search">
+            <svg class="icon"><use href="#search"/></svg>
+            <input type="search" id="searchBox" placeholder="Search haircut, facial, gel polish..." aria-label="Search services" autocomplete="off">
+          </div>
+          <div class="sort">
+            <select id="sortBox" aria-label="Sort services">
+              <option value="popular">Popular first</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="short">Shortest first</option>
+            </select>
+          </div>
+        </div>
+        <div class="cat-chips" id="chips" role="group" aria-label="Filter by category"></div>
+      </div>
+    </div>
+
+    <section class="results" id="results">
+      <div class="wrap">
+        <div class="results-meta">
+          <span id="resultCount" aria-live="polite"></span>
+          <button class="clear" id="clearFilters" type="button" hidden>Clear filters</button>
+        </div>
+        <div class="svc-list" id="serviceGrid"></div>
+      </div>
+    </section>
+    </div>
+
+    <section class="section bg-pearl" id="combos">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="label">Recommended combinations</p>
+            <h2 class="title">Book together, pay less</h2>
+          </div>
+          <p>Popular services bundled by our team. Add a combo and the discount shows in your booking total.</p>
+        </div>
+        <div class="combo-grid" id="comboGrid"></div>
+        <p class="combo-note">Combo discounts are for this demo. Offers cannot be combined with the Hair Spa festive offer.</p>
+      </div>
+    </section>
+
+    <section class="bridal-band">
+      <div class="wrap band-inner">
+        <div>
+          <p class="label">Aaina Bridal</p>
+          <h2>Looking for bridal makeup?</h2>
+          <p>Bridal makeup, hair, mehendi and nails are planned as packages, with a trial before the wedding.</p>
+        </div>
+        <a class="btn btn-gold" href="bridal.html">See bridal packages <svg class="icon"><use href="#arrow"/></svg></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" aria-label="Aaina Beauty Studio, home">
+            <span class="logo-mark">A</span>
+            <span class="logo-text"><span class="logo-name">AAINA</span><span class="logo-sub">Beauty Studio</span></span>
+          </a>
+          <p class="footer-tag">See yourself shine.</p>
+          <div class="social">
+            <a href="#" data-demo="Demo link: Instagram" aria-label="Instagram"><svg class="icon"><use href="#instagram"/></svg></a>
+            <a href="https://wa.me/918791272440" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon"><use href="#whatsapp"/></svg></a>
+            <a href="tel:+918791272440" aria-label="Call"><svg class="icon"><use href="#phone"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="bridal.html">Bridal</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#hair">Hair</a></li>
+            <li><a href="services.html#makeup">Makeup</a></li>
+            <li><a href="services.html#skin">Skin &amp; Waxing</a></li>
+            <li><a href="services.html#nails">Nails</a></li>
+            <li><a href="services.html#mehendi">Mehendi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <ul>
+            <li>Shop 14, Rose Court, Civil Lines, Lucknow</li>
+            <li>Mon to Sat, 10 AM to 8 PM</li>
+            <li>Sunday, 11 AM to 6 PM</li>
+            <li><a href="tel:+918791272440">+91 87912 72440</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Aaina Beauty Studio. Demo project, all names, prices and reviews are fictional.</span>
+        <span>Crafted by <b>Vistas Atelier</b></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- booking tray: appears once a service is added -->
+  <div class="tray" id="tray" aria-live="polite">
+    <div class="tray-info"><b id="trayCount"></b><span id="trayTotal"></span></div>
+    <button class="tray-review" id="trayReview" type="button">Review</button>
+    <a class="btn btn-gold btn-sm" href="booking.html">Continue<span class="long"> to booking</span></a>
+  </div>
+
+  <dialog class="modal" id="detailModal" aria-label="Service details">
+    <button class="modal-close" data-close-modal aria-label="Close"><svg class="icon"><use href="#close"/></svg></button>
+    <div class="modal-body" id="detailBody"></div>
+  </dialog>
+
+  <dialog class="modal" id="trayModal" aria-label="Your booking">
+    <button class="modal-close" data-close-modal aria-label="Close"><svg class="icon"><use href="#close"/></svg></button>
+    <div class="modal-body" id="trayBody"></div>
+  </dialog>
+
+  <a class="wa-float" href="https://wa.me/918791272440?text=Hi%20Aaina%20Beauty%20Studio%2C%20I%20have%20a%20question%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="icon"><use href="#whatsapp"/></svg></a>
+  <div class="vistas-tag" title="Crafted by Vistas Atelier"><i>✦</i> VISTAS <span class="more">Crafted by Vistas Atelier</span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+  <script src="data.js"></script>
+  <script src="services.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+/* Aaina Beauty Studio - booking page
+   Loads after style.css. */
+
+/* ---------- page head ---------- */
+
+.page-head { background: var(--pearl); padding: 52px 0 38px; border-bottom: 1px solid rgba(200, 164, 92, .35); }
+.page-head .head-row { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 40px; }
+.page-head h1 { font-family: var(--f-head); font-weight: 800; font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: .95; letter-spacing: -.02em; text-transform: uppercase; }
+.page-head p:not(.label) { color: var(--muted); margin-top: 14px; max-width: 460px; }
+.head-links { display: flex; flex-wrap: wrap; gap: 12px 26px; }
+.s-wa { width: 100%; margin-top: 18px; }
+.wa-alt { margin-top: 14px; font-size: .9rem; color: var(--muted); }
+.wa-alt a { color: var(--wine); font-weight: 700; border-bottom: 1.5px solid var(--gold); }
+.manage-link { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--wine); border-bottom: 1.5px solid var(--gold); padding-bottom: 3px; }
+
+.book-section { padding: 36px 0 96px; }
+
+.visit-tabs { display: inline-flex; padding: 5px; margin-bottom: 28px; border: 1.5px solid rgba(110, 26, 47, .25); border-radius: 99px; background: #fff; }
+.visit-tabs > * { padding: 10px 22px; border-radius: 99px; font-weight: 700; font-size: .9rem; color: var(--wine); }
+.visit-tabs .active { background: var(--wine); color: var(--ivory); }
+.visit-tabs a:hover { background: rgba(110, 26, 47, .08); }
+
+/* ---------- layout ---------- */
+
+.book-layout { display: grid; grid-template-columns: minmax(0, 1fr) 370px; gap: 32px; align-items: start; }
+.book-layout[hidden], #confirmView[hidden] { display: none; }
+.book-main { background: #fff; border: 1px solid rgba(200, 164, 92, .6); border-radius: 26px; padding: 34px 36px 30px; }
+
+.stepper { display: flex; gap: 8px; margin: 0 0 32px; padding: 0; list-style: none; }
+.stepper li { flex: 1; }
+.stepper button { width: 100%; display: flex; align-items: center; gap: 10px; text-align: left; font-weight: 700; font-size: .88rem; color: var(--muted); padding: 0; }
+.stepper .num {
+  flex: none;
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border: 1.5px solid rgba(110, 26, 47, .3);
+  border-radius: 50%;
+  font-family: var(--f-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--wine);
+}
+.stepper li.done .num { background: var(--wine); border-color: var(--wine); color: var(--ivory); }
+.stepper li.done .num .icon { width: 16px; height: 16px; }
+.stepper li.active .num { background: var(--gold); border-color: var(--gold); color: var(--wine-dark); }
+.stepper li.active button { color: var(--ink); }
+.stepper li:not(:last-child) button::after { content: ""; flex: 1; height: 1px; background: rgba(200, 164, 92, .7); margin-right: 6px; }
+
+.edit-banner { margin-bottom: 22px; padding: 14px 18px; background: var(--pearl); border-radius: 14px; font-size: .93rem; }
+
+.step-title { font-family: var(--f-head); font-weight: 800; font-size: 1.7rem; line-height: 1.05; margin-bottom: 6px; }
+.step-sub { color: var(--muted); margin-bottom: 22px; }
+
+/* step 1: pick services */
+.cat-chips { display: flex; gap: 10px; margin-bottom: 18px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.cat-chips::-webkit-scrollbar { display: none; }
+.cat-chips button { flex: none; padding: 8px 16px; border: 1.5px solid var(--wine); border-radius: 99px; color: var(--wine); font-weight: 700; font-size: .85rem; transition: background .25s, color .25s; }
+.cat-chips button:hover { background: rgba(110, 26, 47, .08); }
+.cat-chips button.active { background: var(--wine); color: var(--ivory); }
+
+.pick-list { display: grid; gap: 10px; }
+.pick {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 14px 18px;
+  text-align: left;
+  border: 1.5px solid rgba(200, 164, 92, .6);
+  border-radius: 16px;
+  background: var(--ivory);
+  transition: border-color .2s, background .2s;
+}
+.pick:hover { border-color: var(--wine); }
+.pick.on { border-color: var(--wine); background: #fff; box-shadow: inset 0 0 0 1px var(--wine); }
+.pick .box { width: 26px; height: 26px; display: grid; place-items: center; border: 1.5px solid rgba(110, 26, 47, .35); border-radius: 8px; color: transparent; }
+.pick .box .icon { width: 16px; height: 16px; }
+.pick.on .box { background: var(--wine); border-color: var(--wine); color: var(--ivory); }
+.pick b { display: block; line-height: 1.2; }
+.pick small { color: var(--muted); font-size: .85rem; }
+.pick .p-price { font-family: var(--f-serif); font-size: 1.5rem; font-weight: 600; color: var(--wine); white-space: nowrap; }
+.pick .p-price small { font-family: var(--f-body); font-size: .75rem; margin-right: 4px; }
+.bridal-hint { margin-top: 18px; font-size: .9rem; color: var(--muted); }
+.bridal-hint a { color: var(--wine); font-weight: 700; border-bottom: 1.5px solid var(--gold); }
+
+/* step 2: artist */
+.artist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.artist-pick { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; align-items: center; padding: 16px 18px; text-align: left; border: 1.5px solid rgba(200, 164, 92, .6); border-radius: 18px; background: var(--ivory); transition: border-color .2s; }
+.artist-pick:hover { border-color: var(--wine); }
+.artist-pick.on { border-color: var(--wine); background: #fff; box-shadow: inset 0 0 0 1px var(--wine); }
+.artist-pick .av { grid-row: span 3; width: 52px; height: 62px; display: grid; place-items: center; border: 1.5px solid var(--gold); border-radius: 999px 999px 4px 4px; font-family: var(--f-serif); font-size: 1.5rem; font-weight: 600; color: var(--wine); background: #fff; }
+.artist-pick b { line-height: 1.15; }
+.artist-pick small { color: var(--muted); font-size: .85rem; }
+.artist-pick .match { font-style: normal; font-size: .78rem; font-weight: 700; color: #2F7D55; }
+.artist-pick .match.no { color: var(--muted); font-weight: 500; }
+.artist-note { margin-top: 16px; padding: 12px 16px; border-radius: 14px; background: var(--pearl); font-size: .9rem; }
+
+/* step 3: date + time */
+.date-strip { display: flex; gap: 10px; overflow-x: auto; padding: 2px 2px 10px; scrollbar-width: thin; }
+.date-btn { flex: none; width: 70px; padding: 12px 0; text-align: center; border: 1.5px solid rgba(200, 164, 92, .6); border-radius: 16px; background: var(--ivory); line-height: 1.2; }
+.date-btn small { display: block; font-size: .75rem; color: var(--muted); font-weight: 500; }
+.date-btn b { display: block; font-family: var(--f-serif); font-size: 1.7rem; font-weight: 600; color: var(--wine); line-height: 1.1; }
+.date-btn:hover { border-color: var(--wine); }
+.date-btn.on { background: var(--wine); border-color: var(--wine); }
+.date-btn.on small, .date-btn.on b { color: var(--ivory); }
+.slot-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; margin: 22px 0 6px; }
+.slot-head h3 { font-family: var(--f-serif); font-size: 1.5rem; font-weight: 600; }
+.slot-head span { font-size: .88rem; color: var(--muted); }
+.slot-group h4 { font-size: .85rem; color: var(--rose-deep); font-weight: 700; margin: 16px 0 8px; }
+.slots { display: flex; flex-wrap: wrap; gap: 10px; }
+.slot { padding: 10px 16px; border: 1.5px solid rgba(110, 26, 47, .3); border-radius: 99px; font-weight: 700; font-size: .88rem; color: var(--wine); transition: background .2s, color .2s; }
+.slot:hover:not(:disabled) { background: rgba(110, 26, 47, .08); }
+.slot.on { background: var(--wine); color: var(--ivory); border-color: var(--wine); }
+.slot:disabled { opacity: .4; text-decoration: line-through; cursor: not-allowed; border-color: rgba(110, 26, 47, .15); }
+.no-slots { padding: 26px; text-align: center; border: 1.5px dashed rgba(200, 164, 92, .8); border-radius: 18px; color: var(--muted); }
+
+/* step 4: details */
+.recap { margin-bottom: 24px; padding: 18px 20px; background: var(--ivory); border: 1px solid rgba(200, 164, 92, .6); border-radius: 18px; display: grid; gap: 8px; font-size: .93rem; }
+.recap div { display: flex; justify-content: space-between; gap: 16px; }
+.recap span { color: var(--muted); }
+.recap b { text-align: right; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.policy { font-size: .85rem; color: var(--muted); margin-top: 4px; }
+
+.step-error { margin-top: 18px; padding: 12px 16px; border-radius: 12px; background: #FBE9E7; color: #A33A33; font-size: .9rem; font-weight: 500; }
+.step-nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 28px; padding-top: 22px; border-top: 1px dashed rgba(200, 164, 92, .8); }
+.step-nav .btn[hidden] { display: none; }
+
+/* ---------- summary ---------- */
+
+.summary { position: sticky; top: 100px; background: var(--pearl); border-radius: 26px; padding: 28px 28px 24px; }
+.summary-toggle { display: none; }
+.summary h3 { font-family: var(--f-serif); font-size: 1.8rem; font-weight: 600; margin-bottom: 14px; }
+.s-line { display: flex; justify-content: space-between; gap: 14px; padding: 10px 0; border-bottom: 1px dashed rgba(200, 164, 92, .9); font-size: .94rem; }
+.s-line span { color: var(--muted); font-size: .85rem; display: block; }
+.s-line.empty { color: var(--muted); }
+.s-sum { margin-top: 12px; display: grid; gap: 6px; font-size: .93rem; }
+.s-sum div { display: flex; justify-content: space-between; }
+.s-sum .discount { color: #2F7D55; }
+.s-sum .grand { margin-top: 6px; padding-top: 10px; border-top: 1px solid rgba(200, 164, 92, .9); font-family: var(--f-serif); font-size: 1.9rem; font-weight: 600; color: var(--wine); }
+.s-when { margin-top: 18px; padding: 14px 16px; background: #fff; border-radius: 14px; font-size: .92rem; display: grid; gap: 4px; }
+.s-when b { display: block; }
+.s-note { margin-top: 16px; font-size: .82rem; color: var(--muted); }
+
+/* ---------- confirmation ---------- */
+
+.confirm { max-width: 640px; margin: 0 auto; text-align: center; background: #fff; border: 1px solid var(--gold); border-radius: 28px; padding: 44px 40px 34px; }
+.confirm .done-icon { width: 68px; height: 68px; margin: 0 auto 18px; display: grid; place-items: center; border-radius: 50%; background: var(--wine); color: var(--gold); }
+.confirm .done-icon.cancelled { background: var(--pearl); color: var(--wine); }
+.confirm .done-icon .icon { width: 32px; height: 32px; }
+.confirm h2 { font-family: var(--f-head); font-weight: 800; font-size: 2rem; line-height: 1.05; margin-bottom: 10px; }
+.confirm > p { color: var(--muted); }
+.confirm .id { display: inline-block; margin: 16px 0 22px; padding: 7px 20px; border: 1px dashed var(--gold); border-radius: 99px; font-weight: 700; color: var(--wine); letter-spacing: .04em; }
+.done-list { text-align: left; max-width: 420px; margin: 0 auto 26px; font-size: .95rem; }
+.done-list li { display: flex; justify-content: space-between; gap: 18px; padding: 10px 0; border-bottom: 1px dashed rgba(200, 164, 92, .8); }
+.done-list span { color: var(--muted); }
+.done-list b { text-align: right; }
+.confirm-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 12px; }
+.confirm .links { display: flex; justify-content: center; gap: 22px; margin-top: 12px; }
+.confirm .links button { color: var(--muted); border-bottom: 1px solid currentColor; font-size: .9rem; }
+.demo-line { margin-top: 20px; font-size: .78rem; color: var(--muted); }
+
+/* ---------- dialog ---------- */
+
+dialog.modal { width: min(500px, 100% - 24px); max-height: calc(100vh - 40px); padding: 0; border: 0; border-radius: 26px; background: var(--ivory); color: var(--ink); box-shadow: 0 30px 60px -20px rgba(43, 19, 24, .6); }
+dialog.modal::backdrop { background: rgba(43, 19, 24, .6); }
+.modal-close { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: rgba(110, 26, 47, .08); color: var(--wine); }
+.modal-body { padding: 34px 30px 28px; }
+.modal-body h2 { font-family: var(--f-head); font-weight: 800; font-size: 1.7rem; line-height: 1.05; padding-right: 40px; margin-bottom: 8px; }
+.modal-body > p { color: var(--muted); margin-bottom: 18px; }
+.modal-body .field { margin-bottom: 14px; }
+.modal-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.found { margin: 14px 0 4px; padding: 16px 18px; background: #fff; border: 1px solid rgba(200, 164, 92, .7); border-radius: 16px; font-size: .93rem; display: grid; gap: 6px; }
+.found div { display: flex; justify-content: space-between; gap: 14px; }
+.found span { color: var(--muted); }
+.status { display: inline-block; padding: 3px 12px; border-radius: 99px; font-size: .78rem; font-weight: 700; background: #DDF1E6; color: #1F6B45; }
+.status.cancelled { background: #F6DEDC; color: #A33A33; }
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 1000px) {
+  .book-layout { grid-template-columns: minmax(0, 1fr); }
+  .summary { position: static; order: -1; padding: 0; background: var(--pearl); }
+  .summary-toggle { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 22px; font-weight: 700; }
+  .summary-toggle .icon { transition: transform .3s; }
+  .summary.open .summary-toggle .icon { transform: rotate(90deg); }
+  .summary-body { display: none; padding: 0 22px 22px; }
+  .summary.open .summary-body { display: block; }
+  .summary h3 { display: none; }
+}
+
+@media (max-width: 700px) {
+  .page-head { padding: 40px 0 28px; }
+  .book-main { padding: 24px 18px 22px; border-radius: 22px; }
+  .stepper li:not(.active) button span:last-child { display: none; }
+  .stepper li:not(:last-child) button::after { display: none; }
+  .stepper { justify-content: space-between; }
+  .stepper li { flex: 0 0 auto; }
+  .stepper li.active { flex: 1; }
+  .artist-grid, .two { grid-template-columns: 1fr; }
+  .pick { grid-template-columns: auto 1fr; }
+  .pick .p-price { grid-column: 2; }
+  .step-nav .btn { flex: 1; }
+  .confirm { padding: 34px 20px 26px; }
+  .visit-tabs { display: flex; }
+  .visit-tabs > * { flex: 1; text-align: center; padding-inline: 10px; }
+  .wa-float { bottom: 22px; }
+  .vistas-tag { bottom: 24px; }
+  .toast { bottom: 24px; }
+  body { padding-bottom: 0; }
+}

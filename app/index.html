@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FBF6EF">
+  <title>Aaina Beauty Studio | App</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="stage">
+    <div class="phone" id="appFrame">
+      <div class="status-bar" aria-hidden="true">
+        <span id="sbTime">9:41</span>
+        <span class="island"></span>
+        <span class="sb-icons">
+          <svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+          <svg viewBox="0 0 16 12"><path d="M8 2.2c2.4 0 4.6.9 6.2 2.5l1.3-1.3A10.6 10.6 0 0 0 8 .4 10.6 10.6 0 0 0 .5 3.4l1.3 1.3A8.8 8.8 0 0 1 8 2.2zm0 3.6c1.4 0 2.7.5 3.7 1.4L13 5.9A7.2 7.2 0 0 0 8 4a7.2 7.2 0 0 0-5 1.9l1.3 1.3c1-.9 2.3-1.4 3.7-1.4zM8 9.4 5.8 8.2a3.4 3.4 0 0 1 4.4 0z"/></svg>
+          <svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="1.8"/><rect x="24.6" y="4" width="1.6" height="4" rx=".8" opacity=".45"/></svg>
+        </span>
+      </div>
+
+      <main class="view" id="view"></main>
+
+      <nav class="tabbar" id="tabbar" aria-label="Main">
+        <button data-go="home"><svg class="icon"><use href="#home"/></svg><span>Home</span></button>
+        <button data-go="services"><svg class="icon"><use href="#sparkle"/></svg><span>Services</span></button>
+        <button data-go="bookings"><svg class="icon"><use href="#calendar"/></svg><span>Bookings</span><i class="badge" id="bookBadge" hidden></i></button>
+        <button data-go="profile"><svg class="icon"><use href="#user"/></svg><span>Profile</span></button>
+      </nav>
+
+      <div class="backdrop" id="backdrop"></div>
+      <section class="sheet" id="sheet" role="dialog" aria-modal="true"></section>
+      <div class="busy" id="busy" hidden><span class="spinner"></span><p>Confirming your booking…</p></div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+
+    <p class="stage-note">Aaina Beauty Studio app, demo only. Nothing is booked or charged. <a href="../index.html">Open the website</a></p>
+  </div>
+
+  <script src="../data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an appointment | Aaina Beauty Studio</title>
+  <meta name="description" content="Book your appointment at Aaina Beauty Studio in four easy steps. Choose services, artist, date and time.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+  <div class="topbar">
+    Festive offer: <b>20% off Hair Spa</b> this month.
+    <a href="tel:+918791272440">Call +91 87912 72440</a>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="index.html" class="logo" aria-label="Aaina Beauty Studio, home">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">
+          <span class="logo-name">AAINA</span>
+          <span class="logo-sub">Beauty Studio</span>
+        </span>
+      </a>
+
+      <nav class="menu" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="bridal.html">Bridal</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#visit">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="open-badge" data-open><i></i><b>Open now</b></span>
+        <a class="icon-btn" href="tel:+918791272440" aria-label="Call us"><svg class="icon"><use href="#phone"/></svg></a>
+        <a class="btn btn-wine btn-sm" href="booking.html">Book Appointment</a>
+        <button class="burger" aria-label="Open menu" aria-expanded="false"><svg class="icon"><use href="#menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mm-top">
+      <span class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text"><span class="logo-name">AAINA</span><span class="logo-sub">Beauty Studio</span></span>
+      </span>
+      <button class="burger" data-close-menu aria-label="Close menu" style="display:grid"><svg class="icon"><use href="#close"/></svg></button>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="bridal.html">Bridal</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#visit">Contact</a>
+    </nav>
+    <div class="mm-foot">
+      <span class="open-badge" data-open><i></i><b>Open now</b></span>
+      <a class="btn btn-wine" href="booking.html">Book Appointment</a>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="page-head">
+      <div class="wrap head-row">
+        <div>
+          <p class="label">Book appointment</p>
+          <h1>Book your visit</h1>
+          <p>Four quick steps. No payment needed, you pay at the studio.</p>
+        </div>
+        <div class="head-links">
+          <a class="manage-link" id="waBook" data-wa-live href="#" target="_blank" rel="noopener"><svg class="icon"><use href="#whatsapp"/></svg> Book on WhatsApp instead</a>
+          <button class="manage-link" id="manageOpen" type="button"><svg class="icon"><use href="#calendar"/></svg> Already booked? Reschedule or cancel</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="book-section">
+      <div class="wrap">
+
+        <div class="visit-tabs" role="tablist" aria-label="Visit type">
+          <span class="active" role="tab" aria-selected="true">Salon visit</span>
+          <a href="bridal.html#trial" role="tab" aria-selected="false">Bridal consultation</a>
+        </div>
+
+        <div class="book-layout" id="flow">
+          <div class="book-main" id="bookMain">
+            <ol class="stepper" id="stepper" aria-label="Booking steps"></ol>
+            <div id="editBanner" class="edit-banner" hidden></div>
+            <div id="stepBody"></div>
+            <p class="step-error" id="stepError" role="alert" hidden></p>
+            <div class="step-nav" id="stepNav"></div>
+          </div>
+
+          <aside class="summary" id="summary" aria-label="Booking summary">
+            <button class="summary-toggle" id="summaryToggle" type="button" aria-expanded="false">
+              <span id="summaryMini">Your booking</span>
+              <svg class="icon"><use href="#chevron-right"/></svg>
+            </button>
+            <div class="summary-body" id="summaryBody"></div>
+          </aside>
+        </div>
+
+        <div id="confirmView" hidden></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" aria-label="Aaina Beauty Studio, home">
+            <span class="logo-mark">A</span>
+            <span class="logo-text"><span class="logo-name">AAINA</span><span class="logo-sub">Beauty Studio</span></span>
+          </a>
+          <p class="footer-tag">See yourself shine.</p>
+          <div class="social">
+            <a href="#" data-demo="Demo link: Instagram" aria-label="Instagram"><svg class="icon"><use href="#instagram"/></svg></a>
+            <a href="https://wa.me/918791272440" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon"><use href="#whatsapp"/></svg></a>
+            <a href="tel:+918791272440" aria-label="Call"><svg class="icon"><use href="#phone"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="bridal.html">Bridal</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#hair">Hair</a></li>
+            <li><a href="services.html#makeup">Makeup</a></li>
+            <li><a href="services.html#skin">Skin &amp; Waxing</a></li>
+            <li><a href="services.html#nails">Nails</a></li>
+            <li><a href="services.html#mehendi">Mehendi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <ul>
+            <li>Shop 14, Rose Court, Civil Lines, Lucknow</li>
+            <li>Mon to Sat, 10 AM to 8 PM</li>
+            <li>Sunday, 11 AM to 6 PM</li>
+            <li><a href="tel:+918791272440">+91 87912 72440</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Aaina Beauty Studio. Demo project, all names, prices and reviews are fictional.</span>
+        <span>Crafted by <b>Vistas Atelier</b></span>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="manageModal" aria-label="Manage your booking">
+    <button class="modal-close" data-close-modal aria-label="Close"><svg class="icon"><use href="#close"/></svg></button>
+    <div class="modal-body" id="manageBody"></div>
+  </dialog>
+
+  <a class="wa-float" href="https://wa.me/918791272440?text=Hi%20Aaina%20Beauty%20Studio%2C%20I%20need%20help%20with%20a%20booking." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="icon"><use href="#whatsapp"/></svg></a>
+  <div class="vistas-tag" title="Crafted by Vistas Atelier"><i>✦</i> VISTAS <span class="more">Crafted by Vistas Atelier</span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+  <script src="data.js"></script>
+  <script src="booking.js"></script>
+</body>
+</html>

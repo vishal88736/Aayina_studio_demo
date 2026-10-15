@@ -1,0 +1,4 @@
+# original AI photos, too big for the repo; final crops live in images/*.jpg
+images/originals/
+images/old/
+*.png
